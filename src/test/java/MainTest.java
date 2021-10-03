@@ -42,7 +42,7 @@ public class MainTest {
     static Stream<Arguments> testWithMethodSource() {
         return Stream.of(
                 Arguments.of(
-                        1, 78
+                        1, 5
                 ),
                 Arguments.of(
                         2, 4.5
