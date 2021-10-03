@@ -33,7 +33,7 @@ public class MainTest {
     }
 
     @EnumSource(MenuItems.class)
-    @ParameterizedTest(name="Enum Source Test")
+    @ParameterizedTest(name="Enum Source Parameterized Test")
     void enumSourceTest(MenuItems menuItems) {
         baseActions();
         duckDuckGoSearchPage.search("Олимпийские игры").switchMenuItem(menuItems);
