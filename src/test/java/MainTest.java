@@ -50,7 +50,7 @@ public class MainTest {
         );
     }
 
-    @MethodSource("testWithMethodSource")
+    @MethodSource("methodSourceTest")
     @ParameterizedTest
     void methodSourceTest(int i, double d) {
         baseActions();
