@@ -33,7 +33,7 @@ public class MainTest {
     }
 
     @EnumSource(MenuItems.class)
-    @ParameterizedTest(name="Enum Source Test")
+    @ParameterizedTest(name="Enum Source Parameterized Test")
     void enumSourceTest(MenuItems menuItems) {
         baseActions();
         duckDuckGoSearchPage.search("Олимпийские игры").switchMenuItem(menuItems);
@@ -42,7 +42,7 @@ public class MainTest {
     static Stream<Arguments> testWithMethodSource() {
         return Stream.of(
                 Arguments.of(
-                        1, 78
+                        1, 5
                 ),
                 Arguments.of(
                         2, 4.5
@@ -50,7 +50,7 @@ public class MainTest {
         );
     }
 
-    @MethodSource("testWithMethodSource")
+    @MethodSource("methodSourceTest")
     @ParameterizedTest
     void methodSourceTest(int i, double d) {
         baseActions();
