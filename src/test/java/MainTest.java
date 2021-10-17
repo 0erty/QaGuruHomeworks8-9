@@ -2,6 +2,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import domain.MenuItems;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -16,8 +17,12 @@ public class MainTest {
     private DuckDuckGoSearchPage duckDuckGoSearchPage = new DuckDuckGoSearchPage();
 
     @BeforeAll
-    static void baseActions() {
+    static void maximizeWindow() {
         Configuration.startMaximized = true;
+    }
+
+    @BeforeEach
+    static void baseActions() {
         Selenide.open(DuckDuckGoSearchPage.url);
     }
 
